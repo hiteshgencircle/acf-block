@@ -1,0 +1,31 @@
+// Merge your values into Bootstrap's map
+$position-values: map-merge(
+    (
+      0: 0,
+      50: 50%,
+      100: 100%
+    ),
+    (
+      20: 20px,
+      27: 27px,
+      82: 82px,
+      "n50": -50%,   // negative for centering tricks
+    )
+);
+
+.banner-text{
+  bottom: 50px;
+}
+
+/* Extra padding at bottom for pagination dots */
+.swiper {
+  padding-bottom: 48px !important;
+}
+
+/* Equal-height slides */
+.swiper-slide {
+  height: auto;
+}
+.swiper-slide-btn{
+  background:#8DCF27 !important;
+}

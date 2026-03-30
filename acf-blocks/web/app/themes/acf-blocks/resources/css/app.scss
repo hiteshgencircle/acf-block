@@ -1,0 +1,37 @@
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+
+/* Optional: ensure image fills height evenly */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Full-viewport hero (e.g. landing page top) */
+.hero-fullscreen {
+  height: 100vh;   /* or min-height: 100vh */
+}
+
+/* Gradient overlay instead of solid black */
+.overlay-gradient {
+  background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1) 0%,
+      rgba(0,0,0,0.65) 100%
+  );
+}
+
+/* Left-aligned text version */
+.overlay-left {
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding-left: 3rem;
+}
+
+.card-btn{
+  color: #000000;
+  background-color: #8DCF27;
+}
+.card-btn:hover{
+  background-color: #6da020;
+  color: #000;
+}
