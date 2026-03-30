@@ -1,224 +1,37 @@
+@import "variables";
+@import "bootstrap/scss/bootstrap";
 
-.workshops-section {
-  padding: 50px 40px 60px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 40px;
-}
-
-.workshops-container {
-  display: flex;
-  gap: 24px;
-  align-items: stretch;
-}
-
-/* ── Static Banner Card (right side) ── */
-.banner-card {
-  flex: 0 0 calc(29.333% - 16px);
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
-  padding: 30px;
-  background-size: cover;
-  background-position: center;
-}
-
-.banner-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-}
-
-.banner-card-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-}
-
-.banner-card-content h2 {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  text-align: right;
-}
-
-.banner-btn {
-  display: inline-block;
-  background-color: #8DCF27;
-  color: #000000;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 15px 30px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.banner-btn:hover {
-  background-color: #68a838;
-}
-
-/* ── Swiper Area (left side) ── */
-.slider-area {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.workshops-swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.workshops-swiper .swiper-slide {
-  height: 100%;
-}
-
-/* ── Workshop Card ── */
-.workshop-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  //box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border: 1px solid #DDDDDD;
-}
-
-.workshop-card-img {
-  width: 100%;
-  height: 220px;
+/* Optional: ensure image fills height evenly */
+.object-fit-cover {
   object-fit: cover;
-  display: block;
 }
 
-.workshop-card-body {
-  padding: 20px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+/* Full-viewport hero (e.g. landing page top) */
+.hero-fullscreen {
+  height: 100vh;   /* or min-height: 100vh */
 }
 
-.workshop-card-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 0;
-  margin-top: 0;
+/* Gradient overlay instead of solid black */
+.overlay-gradient {
+  background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1) 0%,
+      rgba(0,0,0,0.65) 100%
+  );
 }
 
-.workshop-card-desc {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.7;
-  margin-bottom: 21px;
+/* Left-aligned text version */
+.overlay-left {
+  align-items: flex-start !important;
+  text-align: left !important;
+  padding-left: 3rem;
 }
 
-.workshop-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 20px;
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #444;
-}
-
-.meta-icon {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
-.workshop-card-btn {
-  display: block;
-  //width: 100%;
-  text-align: center;
-  background-color: #8DCF27;
+.card-btn{
   color: #000000;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 17px 34px;
-  border-radius: 4.54px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  margin-top: auto;
+  background-color: #8DCF27;
 }
-
-.workshop-card-btn:hover {
-  background-color: #71A61F;
-}
-
-
-/* ── Responsive ── */
-@media (max-width: 1024px) {
-  .workshops-section {
-    padding: 40px 24px 50px;
-  }
-
-  .section-title {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-
-  .banner-card {
-    min-height: 420px;
-  }
-
-  .banner-card-content h2 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .workshops-container {
-    flex-direction: column;
-  }
-
-  .banner-card {
-    flex: none;
-    min-height: 350px;
-  }
-
-  .slider-area {
-    flex: none;
-    width: 100%;
-  }
-
-  .section-title {
-    font-size: 26px;
-    margin-bottom: 24px;
-  }
-
-  .workshops-section {
-    padding: 30px 16px 40px;
-  }
+.card-btn:hover{
+  background-color: #6da020;
+  color: #000;
 }

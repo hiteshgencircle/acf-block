@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 const swiper = new Swiper('.workshops-swiper', {
   direction: 'horizontal',
   loop: true,
